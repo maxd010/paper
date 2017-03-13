@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8"/>
+    <title>试题样式</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/paper.css"/>
+</head>
+<body>
+
+
+
+<!--右边栏-->
+<div class="m-card m-sd">
+    <p class="m-time-des">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>考试已结束</p>
+    <div style="float: left">
+        <p class="m-time-des">正确率</p>
+        <h5 class="m-time" style="font-size: 32px">98%</h5></div>
+    <div style="margin-left: 120px">
+        <p class="m-time-des">用时</p>
+        <h5 class="m-time" style="font-size: 32px">20分钟</h5></div>
+</div>
+<!--右边栏－答题卡-->
+<div class="m-card m-sd">
+    <h2 class="m-answer-title">答题卡
+        <span class="m-answer-wrong">答错</span>
+        <span class="m-answer-right">答对</span>
+        <span class="wd">未答</span>
+    </h2>
+
+    <div class="m-line"></div>
+    <ul class="m-answer">
+        <li>
+            <p class="m-tixing">听力题</p>
+            <a class="m-answer-detail m-right" href="#">1</a>
+            <a class="m-answer-detail m-right" href="#">2</a>
+            <a class="m-answer-detail m-right" href="#">3</a>
+            <a class="m-answer-detail m-right" href="#">4</a>
+            <a class="m-answer-detail m-right" href="#">5</a>
+            <a class="m-answer-detail m-right" href="#">6</a>
+        </li>
+        <li>
+            <p class="m-tixing">听力题</p>
+            <a class="m-answer-detail m-right" href="#">7</a>
+            <a class="m-answer-detail m-right" href="#">8</a>
+            <a class="m-answer-detail m-right" href="#">9</a>
+            <a class="m-answer-detail m-right" href="#">10</a>
+            <a class="m-answer-detail m-right" href="#">11</a>
+            <a class="m-answer-detail m-wrong" href="#">12</a>
+        </li>
+    </ul>
+</div>
+
+
+<table  id="table" class="">
+    <thead>
+    <tr>
+        <th data-field="num">题号</th>
+        <th data-field="percent">正确率</th>
+        <th data-field="type" width="100">题型</th>
+        <th data-field="difficulty">难度</th>
+        <th data-field="total">作答人数</th>
+        <th data-field="right">正确人数</th>
+        <th data-field="wrong">错误人数</th>
+        <th >查看详情</th>
+    </tr>
+    </thead>
+</table>
+
+</body>
+</html>

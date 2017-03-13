@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        试题样式
+    </title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/paper.css"/>
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="top_bar">
+</div>
+<div class="m-bd m-card">
+    <div class="m-paper-info">
+        <img class="m-paper-img" src="images/icon_paper.png" alt=""/>
+        <h2 class="m-paper-title">
+            初一年级第一次单元考试
+        </h2>
+        <p class="m-paper-des">
+            作为水平测试的学业检测，该测试涉及三年级上学期教科书中 的内容占测试测试分为三部分：口语测试、听力测试和读写测试
+        </p>
+        <p class="m-paper-item">
+            来源：成实外2015年招生考试
+        </p>
+        <p class="m-paper-item">
+            时间：120分钟
+        </p>
+        <p class="m-paper-item">
+            进度：46 / 46
+        </p>
+        <a href="#1" class="m-btn-mid m-btn-forbidden" >考试已结束</a>
+    </div>
+    <div class="m-paper-result">
+        <div id="c1"  class="" style="min-height: 300px;width:400px;display: inline-block"></div>
+
+        <div class="m-answer-detial">
+            <div class="m-answer-title">
+                <a href="start.html" class="m-btn-mid">答题详情</a>
+                <span class="m-answer-wrong">答错</span>
+                <span class="m-answer-right">答对</span>
+                <span >未答</span>
+            </div>
+            <div class="m-answer-stu">
+                <a class="m-answer-detail m-right" href="#t1">1</a>
+                <a class="m-answer-detail m-wrong" href="#t2">2</a>
+                <a class="m-answer-detail" href="#t3">3</a>
+                <a class="m-answer-detail" href="#t4">4</a>
+                <a class="m-answer-detail" href="#t5">5</a>
+                <a class="m-answer-detail" href="#t6">6</a>
+                <a class="m-answer-detail m-right" href="#t1">7</a>
+                <a class="m-answer-detail m-right" href="#t1">8</a>
+                <a class="m-answer-detail m-right" href="#t1">9</a>
+                <a class="m-answer-detail m-right" href="#t1">10</a>
+                <a class="m-answer-detail m-right" href="#t1">11</a>
+                <a class="m-answer-detail m-right" href="#t1">12</a>
+                <a class="m-answer-detail m-right" href="#t1">13</a>
+                <a class="m-answer-detail m-right" href="#t1">14</a>
+                <a class="m-answer-detail m-right" href="#t1">15</a>
+                <a class="m-answer-detail m-right" href="#t1">16</a>
+                <a class="m-answer-detail m-right" href="#t1">17</a>
+                <a class="m-answer-detail m-wrong" href="#t2">18</a>
+                <a class="m-answer-detail m-right" href="#t1">11</a>
+                <a class="m-answer-detail m-right" href="#t1">12</a>
+                <a class="m-answer-detail m-right" href="#t1">13</a>
+                <a class="m-answer-detail m-right" href="#t1">14</a>
+                <a class="m-answer-detail m-right" href="#t1">15</a>
+                <a class="m-answer-detail m-right" href="#t1">16</a>
+                <a class="m-answer-detail m-right" href="#t1">17</a>
+                <a class="m-answer-detail m-wrong" href="#t2">18</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+<script src="js/echarts.common.min.js"></script>
+<script>
+    function DrawChart1() {
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('c1'));
+
+
+        option = {
+            title: [{
+                text: '正确率',
+                textStyle: {
+                    color: '#717881',
+                    fontSize: '14'
+                },
+                textAlign: 'center',
+                x: '48%',
+                y: '40%'
+            }, {
+                text: '92%',
+                textStyle: {
+                    color: '#717881',
+                    fontSize: '28'
+                },
+                textAlign: 'center',
+                x: '48%',
+                y: '48%'
+            }], tooltip: {
+
+               triggerOn:'none'
+            
+            },
+            color: ['#bae6b0', '#ee938f', '#e6e8ed'],
+
+            textStyle: {
+                color: '#717881',
+                fontSize: '14'
+            },
+
+
+            series: [
+
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    radius: ['40%', '55%'],
+                    label: {
+
+                        normal: {
+
+                            formatter: '{b} {c}',
+
+                            textStyle: {
+                                color: '#959aa0',
+                                fontSize: '12'
+                            }
+
+                        },
+                        emphasis: {
+                            textStyle: {
+                                color: '#717881',
+                                fontSize: '14'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: true,
+                            lineStyle: {
+                                color: '#959aa0',
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        nomal: {
+                            borderColor: '#fff',
+                            borderWidth: '2'
+                        },
+                    },
+//                    silent:'true',
+                    data: [
+                        {value: 122, name: '答对'},
+                        {value: 26, name: '答错'},
+                        {value: 8, name: '未答'}
+                    ]
+
+                }
+            ]
+
+
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+    }
+    DrawChart1();
+</script>
+
+</html>

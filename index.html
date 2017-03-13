@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>试题样式</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/paper.css"/>
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.7.2.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="top_bar">
+</div>
+<div class="m-bd m-card">
+    <div class="m-paper-info">
+        <img class="m-paper-img" src="images/icon_paper.png" alt=""/>
+        <h2 class="m-paper-title">
+            初一年级第一次单元考试
+        </h2>
+        <p class="m-paper-des">
+            作为水平测试的学业检测，该测试涉及三年级上学期教科书中 的内容占测试测试分为三部分：口语测试、听力测试和读写测试
+        </p>
+        <p class="m-paper-item">
+            来源：成实外2015年招生考试
+        </p>
+        <p class="m-paper-item">
+            时间：120分钟
+        </p>
+        <p class="m-paper-item">
+            进度：0 / 46
+        </p>
+        <a href="finish.html" class="m-btn-mid">开始考试</a>
+    </div>
+</div>
+<div class="m-bd m-card">
+
+    <div class="m-paper-info">
+        <img class="m-paper-img" src="images/icon_paper.png" alt=""/>
+        <h2 class="m-paper-title">
+            初一年级第一次单元考试
+        </h2>
+        <p class="m-paper-des">
+            作为水平测试的学业检测，该测试涉及三年级上学期教科书中 的内容占测试测试分为三部分：口语测试、听力测试和读写测试
+        </p>
+        <p class="m-paper-item">
+            来源：成实外2015年招生考试
+        </p>
+        <p class="m-paper-item">
+            时间：120分钟
+        </p>
+        <p class="m-paper-item">
+            进度：46 / 46
+        </p>
+        <a href="#1" class="m-btn-mid m-btn-forbidden">考试已结束</a>
+    </div>
+    <div class="m-paper-result">
+        <div id="c1" class="" style="min-height: 300px;width:400px;display: inline-block"></div>
+
+        <div class="m-answer-detial">
+            <div class="m-answer-title">
+                <!--<a href="start.html" class="m-btn-mid">答题详情</a>-->
+                <label>答题卡</label>
+                <span class="m-answer-wrong">答错</span>
+                <span class="m-answer-right">答对</span>
+                <span>未答</span>
+            </div>
+            <div class="m-answer-stu">
+                <a class="m-answer-detail m-right" href="#t1">1</a>
+                <a class="m-answer-detail m-wrong" href="#t2">2</a>
+                <a class="m-answer-detail" href="#t3">3</a>
+                <a class="m-answer-detail" href="#t4">4</a>
+                <a class="m-answer-detail" href="#t5">5</a>
+                <a class="m-answer-detail" href="#t6">6</a>
+                <a class="m-answer-detail m-right" href="#t1">7</a>
+                <a class="m-answer-detail m-right" href="#t1">8</a>
+                <a class="m-answer-detail m-right" href="#t1">9</a>
+                <a class="m-answer-detail m-right" href="#t1">10</a>
+                <a class="m-answer-detail m-right" href="#t1">11</a>
+                <a class="m-answer-detail m-right" href="#t1">12</a>
+                <a class="m-answer-detail m-right" href="#t1">13</a>
+                <a class="m-answer-detail m-right" href="#t1">14</a>
+                <a class="m-answer-detail m-right" href="#t1">15</a>
+                <a class="m-answer-detail m-right" href="#t1">16</a>
+                <a class="m-answer-detail m-right" href="#t1">17</a>
+                <a class="m-answer-detail m-wrong" href="#t2">18</a>
+                <a class="m-answer-detail m-right" href="#t1">11</a>
+                <a class="m-answer-detail m-right" href="#t1">12</a>
+                <a class="m-answer-detail m-right" href="#t1">13</a>
+                <a class="m-answer-detail m-right" href="#t1">14</a>
+                <a class="m-answer-detail m-right" href="#t1">15</a>
+                <a class="m-answer-detail m-right" href="#t1">16</a>
+                <a class="m-answer-detail m-right" href="#t1">17</a>
+                <a class="m-answer-detail m-wrong" href="#t2">18</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--左侧内容-->
+<div class="m-bd">
+    <div class="m-card m-mn">
+        <h2 class="m-name">一、题型 <span>听录音，选择最佳答案（共 5 题，每题 1 分）</span></h2>
+        <div class="m-question-waper">
+
+            <!--题干多种表现形式-->
+            <div class="m-question">
+                <span class="m-question-num">1</span>
+                <img src="temp_resource/pic.jpg" alt="">
+
+                <p class="m-question-title">It was a(n)______game! Our class won, 56－ 55. We sang happily after
+                    the game was over.</p>
+                <a class="audio" href="javascript:playAudio()"><i class="fa fa-volume-up"></i></a>
+                <audio id="audio_player" src="temp_resource/listen1.mp3">
+                    这里有一段听力，您的浏览器不支持播放。
+                </audio>
+                <!--单选-->
+                <div class="m-question-options m-half">
+                    <label> <input type="radio" name="123" value=""> A. Nice to meet you!</label>
+                    <label> <input type="radio" name="123" value=""> B. Bye</label>
+                    <label> <input type="radio" name="123" value=""> C.See you later!</label>
+                    <label> <input type="radio" name="123" value=""> D.Not bad, and you?</label>
+                </div>
+                <!--判断-->
+                <div class="m-question-options m-quarter">
+                    <label> <input type="radio" name="1234" value=""> Ture</label>
+                    <label> <input type="radio" name="1234" value=""> False</label>
+                </div>
+
+
+            </div>
+
+            <!--只有一个空的填空题-->
+            <div class="m-question">
+                <span class="m-question-num">2</span>
+                <p class="m-question-title">It was a(n)______game! Our class won, 56－ 55. We sang happily after
+                    the game was over.</p>
+
+                <div class="m-question-options m-full">
+                    <input class="m-input" type="text" name="1234" value="答题完成样式" autocomplete="off">
+                    <input type="text" name="1234" value="请填写你的答案" autocomplete="off">
+                </div>
+
+
+            </div>
+
+            <!--有多个空的填空题-->
+            <div class="m-question">
+                <p class="m-question-title">It was a(n)___3___game! Our class won, 56－ 55. We ___4___ happily after
+                    the ___5___ was over.</p>
+
+                <div class="m-question-options m-full">
+                    <span class="m-question-num m-sub-num">3</span>
+                    <input type="text" name="1234" value="请填写你的答案" autocomplete="off">
+                </div>
+                <div class="m-question-options m-full">
+                    <span class="m-question-num m-sub-num">4</span>
+                    <input type="text" name="1234" value="请填写你的答案" autocomplete="off">
+                </div>
+                <div class="m-question-options m-full">
+                    <span class="m-question-num m-sub-num">5</span>
+                    <input type="text" name="1234" value="请填写你的答案" autocomplete="off">
+                </div>
+
+            </div>
+
+
+            <!--组合题－完形填空-->
+            <div class="m-question">
+                <span class="m-question-num">9</span>
+                <!--阅读材料-->
+                <p class="m-question-material"> Life is speeding up. Everyone is getting unwell. This may sound like
+                    someone would say today. But in fact, <span>13</span> unknown person who lived in Rome in AD(公元) 53
+                    wrote it.
+                    You’re rushing to finish your homework on the computer. Your mobile phone rings, a QQ 14 from your
+                    friend 15 on the screen, the from the television is getting louder and louder. Suddenly the computer
+                    breaks 16 and you lose all your homework. Now you have to up all night to get it done. How happy do
+                    you feel?
+                </p>
+
+                <div class="m-question-options m-full">
+                    <span class="m-question-num m-sub-num">6</span>
+                    <label> <input type="radio" name="1" value=""> A. Life is speeding up. Everyone is getting
+                        unwell</label>
+                    <label> <input type="radio" name="1" value=""> B. Your mobile phone rings</label>
+                    <label> <input type="radio" name="1" value=""> C. finish your homework on the computer</label>
+                    <label> <input type="radio" name="1" value=""> D. This may sound like someone</label>
+                </div>
+                <div class="m-question-options m-half">
+                    <span class="m-question-num m-sub-num">7</span>
+                    <label> <input type="radio" name="12" value=""> A. Life is speeding up</label>
+                    <label> <input type="radio" name="12" value=""> B. Your mobile phone rings</label>
+                    <label> <input type="radio" name="12" value=""> C. Life is speeding up</label>
+                    <label> <input type="radio" name="12" value=""> D. Your mobile phone rings</label>
+                </div>
+                <div class="m-question-options m-quarter">
+                    <span class="m-question-num m-sub-num">8</span>
+                    <label> <input type="radio" name="123" value=""> A. a</label>
+                    <label> <input type="radio" name="123" value=""> B. Both</label>
+                    <label> <input type="radio" name="123" value=""> C. some</label>
+                    <label> <input type="radio" name="123" value=""> D. neither</label>
+                </div>
+
+
+            </div>
+
+            <!--组合题－阅读理解-->
+
+            <div class="m-question">
+                <span class="m-question-num">9</span>
+                <!--阅读材料-->
+                <p class="m-question-material">
+                    Nelson Mandela, the first black President of South Africa, passed away at his home. He is one of the
+                    greatest people in the 20th century. The whole world mourned the father of new South Africa. His
+                    life is full of stories.
+                </p>
+                <p class="m-question-material">
+                    Nelson Mandela, the first black President of South Africa, passed away at his home. He is one of the
+                    greatest people in the 20th century. The whole world mourned the father of new South Africa. His
+                    life is full of stories.
+                    Nelson Mandela, the first black President of South Africa, passed away at his home. He is one of the
+                    greatest people in the 20th century. The whole world mourned the father of new South Africa. His
+                    life is full of stories.
+                </p>
+
+
+                <div class="m-question m-sub-question">
+                    <span class="m-question-num m-sub-num">9</span>
+                    <p class="m-question-title">It was a(n)______game! We sang happily after the game was over.We sang
+                        happily after the game was over.We sang happily after the game was over.We sang happily after
+                        the game was over</p>
+                    <div class="m-question-options m-quarter">
+                        <label> <input type="radio" name="1" value=""> A. a</label>
+                        <label> <input type="radio" name="1" value=""> B. Both</label>
+                        <label> <input type="radio" name="1" value=""> C. some</label>
+                        <label> <input type="radio" name="1" value=""> D. neither</label>
+                    </div>
+                </div>
+                <div class="m-question m-sub-question">
+                    <span class="m-question-num m-sub-num">10</span>
+                    <p class="m-question-title">It was a(n)______game! We sang happily after the game was over.We sang
+                        happily after the game was over.We sang happily after the game was over.We sang happily after
+                        the game was over</p>
+                    <div class="m-question-options m-quarter">
+                        <label> <input type="radio" name="1" value=""> A. a</label>
+                        <label> <input type="radio" name="1" value=""> B. Both</label>
+                        <label> <input type="radio" name="1" value=""> C. some</label>
+                        <label> <input type="radio" name="1" value=""> D. neither</label>
+                    </div>
+                </div>
+
+
+                <div class="m-sub-question">
+                    <span class="m-question-num m-sub-num">11</span>
+                    <p class="m-question-title">It was a(n)______game! We sang happily after the game was over.We sang
+                        happily after the game was over.We sang happily after the game was over.We sang happily after
+                        the game was over</p>
+                    <div class="m-question-options m-quarter">
+                        <label> <input type="radio" name="1" value=""> A. a</label>
+                        <label> <input type="radio" name="1" value=""> B. Both</label>
+                        <label> <input type="radio" name="1" value=""> C. some</label>
+                        <label> <input type="radio" name="1" value=""> D. neither</label>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="m-btn-next" onclick="javascript:alert('切换到下一题')">
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--右边栏-->
+    <div class="m-card m-sd">
+        <p class="m-time-des"><i class="fa fa-clock-o" aria-hidden="true"></i>距考试结束还有</p>
+        <h5 class="m-time">01:26:32</h5>
+        <a href="javascript:alert('确定要交卷吗？')" class="m-btn-big">我要交卷</a>
+    </div>
+    <!--右边栏－答题卡-->
+    <div class="m-card m-sd">
+        <h2 class="m-answer-title">答题卡 <span class="yd"> 已答</span><span class="wd">未答</span></h2>
+        <div class="m-line"></div>
+        <ul class="m-answer">
+            <li><p class="m-tixing">听力题</p> <a class="m-answer-detail m-yd" href="#t1">1</a> <a
+                    class="m-answer-detail m-yd" href="#t2">2</a> <a class="m-answer-detail m-yd" href="#t3">3</a> <a
+                    class="m-answer-detail m-yd" href="#t4">4</a> <a class="m-answer-detail m-yd" href="#t5">5</a> <a
+                    class="m-answer-detail m-yd" href="#t6">6</a></li>
+            <li><p class="m-tixing">单选题</p> <a class="m-answer-detail m-yd" href="#">7</a> <a class="m-answer-detail"
+                                                                                              href="">8</a> <a
+                    class="m-answer-detail m-yd" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                    class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                    class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                    class="m-answer-detail" href="">18</a></li>
+            <li><p class="m-tixing">单选题</p> <a class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a>
+                <a class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                        class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                        class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a></li>
+            <li><p class="m-tixing">单选题</p> <a class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a>
+                <a class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                        class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                        class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a></li>
+            <li><p class="m-tixing">单选题</p> <a class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a>
+                <a class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                        class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a> <a
+                        class="m-answer-detail" href="">8</a> <a class="m-answer-detail" href="">8</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    // 听力播放器
+    var x = document.getElementById("audio_player");
+    function playAudio() {
+
+        x.play();
+    }
+    function pauseAudio() {
+
+        x.pause();
+    }
+</script>
+<script src="js/echarts.common.min.js"></script>
+<script>
+    //统计图表
+    function DrawChart1() {
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('c1'));
+
+
+        option = {
+            title: [{
+                text: '正确率',
+                textStyle: {
+                    color: '#717881',
+                    fontSize: '14'
+                },
+                textAlign: 'center',
+                x: '48%',
+                y: '40%'
+            }, {
+                text: '92%',
+                textStyle: {
+                    color: '#717881',
+                    fontSize: '28'
+                },
+                textAlign: 'center',
+                x: '48%',
+                y: '48%'
+            }], tooltip: {
+
+                triggerOn: 'none'
+
+            },
+            color: ['#bae6b0', '#ee938f', '#e6e8ed'],
+
+            textStyle: {
+                color: '#717881',
+                fontSize: '14'
+            },
+
+
+            series: [
+
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    radius: ['40%', '55%'],
+                    label: {
+
+                        normal: {
+
+                            formatter: '{b} {c}',
+
+                            textStyle: {
+                                color: '#959aa0',
+                                fontSize: '12'
+                            }
+
+                        },
+                        emphasis: {
+                            textStyle: {
+                                color: '#717881',
+                                fontSize: '14'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: true,
+                            lineStyle: {
+                                color: '#959aa0',
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        nomal: {
+                            borderColor: '#fff',
+                            borderWidth: '2'
+                        },
+                    },
+//                    silent:'true',
+                    data: [
+                        {value: 122, name: '答对'},
+                        {value: 26, name: '答错'},
+                        {value: 8, name: '未答'}
+                    ]
+
+                }
+            ]
+
+
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+    }
+    DrawChart1();
+</script>
+</html>

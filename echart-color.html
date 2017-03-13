@@ -1,0 +1,87 @@
+<!--
+Echart
+
+series.itemStyle.color 单序列数据颜色交替实现效果测试文档
+
+作者：Reese
+版本：V0.1
+时间：2015-08-12
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<div id="main" style="width: 550px; height: 300px"></div>
+<div id="ss" ></div>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+
+    require.config({
+        paths : {
+            echarts : 'http://echarts.baidu.com/build/dist'
+        }
+    });
+    require(
+            [ 'echarts', 'echarts/chart/bar',
+                'echarts/chart/line'
+
+            ],
+            function(ec) {
+                var myChart = ec.init(document.getElementById('main'),
+                        'macarons');
+
+                var option = {
+                    xAxis : {
+                        show : true,
+                        type : 'category',
+                        data : [ '一', '二', '三', '四',
+                            '五','六','七','八','九','十']
+                    },
+                    yAxis : {
+                        type : 'value'
+                    },
+                    series : [ {
+                        name : "人数",
+                        type : "bar",
+                        data : [ 12, 24, 25, 11, 18 ,11,17,15,26,19]
+
+                    } ]
+                };
+                option.series[0].itemStyle={
+                    normal: {
+
+                        color: function(params) {
+
+                            var index = params.dataIndex;
+                            var alternateNumber = 6;
+
+                            var newColor="";
+                            var colorList = ['#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                                '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                            ];
+
+                            if(index < alternateNumber){
+
+                                newColor = colorList[index];
+
+                            }else{
+
+                                var rowNumber=Math.floor(index/alternateNumber);
+
+                                newColor = colorList[index-rowNumber*alternateNumber];
+                            }
+                            return newColor
+                        }
+                    }
+
+                };
+                myChart.setOption(option);
+            });
+</script>
+
+</body>
+</html>

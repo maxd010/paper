@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/paper.css">
+
+    <style>
+        .audio{margin: 10px 0;display:block;width:32px;height:32px;border-radius: 50%;background: #8ad7ff;text-align: center;margin-left: 10px}
+        .audio i{color: #fff;font-size: 16px;line-height: 32px;}
+
+    </style>
+</head>
+<body>
+<h2>听力题</h2>
+<audio id="audio_player" src="temp_resource/listen3.mp3">
+    这里是听力，但是您的浏览器不支持，。
+</audio>
+<a class="audio" href="#"><i class="fa fa-volume-up"></i> <span class="p-total-time"></span><span class="p-current-time"></span></a>
+<script src="js/jquery.min.js"></script>
+<script>
+    // 听力播放器
+    var x = document.getElementById("audio_player");
+
+        $('.audio').click(
+
+
+
+
+                function () {
+
+
+                    //设置音频url 并播放
+//                    $(x).attr("src","temp_resource/listen3.mp3");
+                    x.play();
+
+                    //绘制播放器
+                     var str = $(x).attr("totalTime");
+                    console.log(x.currentTime+'/'+x.duration)
+
+
+
+                    
+                }
+
+        )
+
+
+            
+
+
+
+
+</script>
+</body>
+</html>

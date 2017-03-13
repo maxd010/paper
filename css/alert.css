@@ -1,0 +1,117 @@
+/* reset */
+html, body, div, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+#m-mask {
+    z-index: 998;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(78, 86, 97, 0.92);
+}
+
+.m-alert {
+    z-index: 999;
+    background: #fff;
+    width: 380px;
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -210px;
+    margin-top: -110px;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.m-alert .m-alert-title {
+    width: 100%;
+    height: 46px;
+    background: #f6f6f7;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 46px;
+    box-sizing: border-box;
+    text-indent: 16px;
+    color: #606771;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.m-alert .m-alert-title > a {
+    transition: 0.8s;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    right: 0;
+    background: url("../images/close.png") no-repeat center center;
+    background-size: 32%;
+}
+
+.m-alert .m-alert-title > a:hover {
+    transform: rotate(360deg);
+}
+
+.m-alert-content {
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #717881;
+}
+
+.m-alert-content > span {
+    margin: 0 2px;
+    color: #d75953
+}
+
+.m-alert .m-alert-btn {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.m-alert-btn .btn-nomal, .m-alert-btn .btn-sure {
+    font-size: 12px;
+    padding: 8px 26px;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.m-alert-btn .btn-nomal {
+    border-color: #dcdddf;
+    color: #717881;
+}
+
+.m-alert-btn .btn-sure {
+    border-color: #46bb95;
+    background: #65ccab;
+    color: #fff;
+}
+
+.m-alert-btn .btn-nomal:hover {
+    border-color: #cacdd0;
+    color: #46bb95;
+}
+
+.m-alert-btn .btn-sure:hover {
+    border-color: #65ccab;
+    background: #5edbb3;
+    color: #fff;
+}

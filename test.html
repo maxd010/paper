@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+
+    <style>
+        /* reset */
+        html, body, div, p, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        a, a:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        p{margin: 6px 0;}
+        #m-mask {
+            z-index: 998;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(images/bg.png);
+        }
+
+        .m-alert {
+            z-index: 999;
+            background: #fff;
+            max-width: 600px;
+            min-height:280px;
+            margin: 50px auto;
+            border-radius: 5px;
+            overflow: hidden;
+            padding-bottom: 10px;
+        }
+
+        .m-alert .m-alert-title {
+            width: 100%;
+            height: 46px;
+            background: #f6f6f7;
+            border-bottom: 1px solid #e5e5e5;
+            line-height: 46px;
+            box-sizing: border-box;
+            text-indent: 16px;
+            color: #606771;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .m-alert .m-alert-title > a {
+            transition: 0.8s;
+            width: 46px;
+            height: 46px;
+            background: url("images/close.png") no-repeat center center;
+            background-size: 32%;
+            float: right;
+        }
+
+        .m-alert .m-alert-title > a:hover {
+            transform: rotate(360deg);
+        }
+
+        .m-alert-content {
+            padding: 20px 30px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #717881;
+            position: relative;
+        }
+
+        .m-alert-content > span {
+            margin: 0 2px;
+            color: #d75953
+        }
+
+        .m-alert .m-alert-btn {
+            width: 100%;
+            margin-bottom: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            clear: both
+        }
+
+        .m-alert-btn .btn-nomal, .m-alert-btn .btn-sure {
+            font-size: 12px;
+            padding: 8px 26px;
+            border-radius: 3px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: 1px solid;
+            transition: background-color 0.2s, color 0.2s, border 0.2s;
+        }
+
+        .m-alert-btn .btn-nomal {
+            border-color: #dcdddf;
+            color: #717881;
+        }
+
+        .m-alert-btn .btn-sure {
+            border-color: #46bb95;
+            background: #65ccab;
+            color: #fff;
+            float: right;
+        }
+
+        .m-alert-btn .btn-nomal:hover {
+            border-color: #cacdd0;
+            color: #46bb95;
+        }
+
+        .m-alert-btn .btn-sure:hover {
+            border-color: #65ccab;
+            background: #5edbb3;
+            color: #fff;
+        }
+
+        .m-alert-content a {
+            border: 1px solid #ffffff;
+            width: 90px;
+            display: block;
+            float: left;
+            text-align: center;
+            margin: 10px 10px;
+            overflow: hidden;
+            font-size: 12px;
+            padding: 10px
+        }
+
+        .m-alert-content a:hover {
+            border: 1px solid #65ccab;
+        }
+        .m-alert-content  img {
+            display: block;
+            height:235px;
+            position: relative;
+            top:-10px;
+            left: -20px;
+        }
+        .m-alert-content .icon {
+            top:0px;
+            left: 0px;
+            width: 62px;
+            height: 62px;
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+            border: none;
+        }
+
+
+    </style>
+
+
+
+
+<div id="m-mask">
+
+    <!--选择浏览器-->
+    <div class="m-alert"  id="al1">
+        <div class="m-alert-title"> 好像，出了点小问题</div>
+
+        <div class="m-alert-content">
+            <p>不要慌，请按下面提示操作，一会就好了。</p>
+            <p>1）请选择你正在使用的浏览器</p>
+            <a href="javascript:bro(7,3)"><img class="icon" src="images/360.png" alt="360安全浏览器">360安全浏览器</a>
+            <a href="javascript:bro(7,5)"><img class="icon" src="images/qq.png" alt="qq浏览器"><span>QQ 浏览器</span></a>
+            <a href="javascript:bro(7,7)"><img class="icon" src="images/souhu.png" alt="搜狗高速浏览器">搜狗高速浏览器</a>
+            <a href="javascript:bro(7,2)"><img class="icon" src="images/none.png" >都不是？</a>
+    </div>
+
+
+    <div class="m-alert-btn" style="font-size:12px;color:#999999;margin: 140px 0 0 10px">仍有疑问？ 请联系 QQ 15027502009 </div>
+
+</div>
+    <!--推荐浏览器-->
+    <div class="m-alert" id="al2">
+        <div class="m-alert-title"> 推荐你使用以下浏览器？</div>
+
+        <div class="m-alert-content">
+            <a href="http://download.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe"><img class="icon" src="images/fox.png" alt="火狐浏览器">火狐浏览器</a>
+            <p style="margin-top: 40px">请点击左侧图标，下载并安装我们推荐的浏览器；</p>
+            <p>用新安装的浏览器打开我们的网站：www.yingyushu.com；</p>
+
+        </div>
+
+
+        <div class="m-alert-btn" style="font-size:12px;color:#999999;margin: 60px 0 0 10px">仍有疑问？ 请联系 QQ 15027502009 </div>
+
+    </div>
+
+    <!--360切换浏览器内核-->
+    <div class="m-alert" id="al3">
+        <div class="m-alert-title"> 找到问题了</div>
+
+        <div class="m-alert-content">
+            <p style="position: absolute">2).请在本窗口右上角区域找到下图红色框中所示的“图标    ”
+            </p>
+            <img src="images/360_step1.png" width="580";height="235px">
+
+        </div>
+
+        <div class="m-alert-btn" style="font-size:12px;color:#999999;margin: 0px 0 0 10px">仍有疑问？请联系 QQ 1502750200<a class="btn-sure" href="javascript:bro(7,4)">下一步</a></div>
+
+    </div>
+    <div class="m-alert" id="al4">
+        <div class="m-alert-title"> 找到问题了</div>
+
+        <div class="m-alert-content">
+            <p >3).点击图标，选择切换到“极速模式（推荐）”</p>
+            <img src="images/360_step2.png">
+
+        </div>
+
+        <div class="m-alert-btn" style="font-size:12px;color:#999999;margin: 0 20px 0 10px">仍有疑问？请联系 QQ 1502750200<a class="btn-sure" href="">我知道了</a></div>
+
+    </div>
+
+    <!--qq切换浏览器内核-->
+    <div class="m-alert" id="al5">
+        <div class="m-alert-title"> 找到问题了</div>
+
+        <div class="m-alert-content">
+            <p style="position: absolute">2).请在本窗口右上角区域找到下图红色框中所示的“图标”
+                </p>
+            <img src="images/qq_step1.png" width="580";height="235px">
+
+        </div>
+
+        <div class="m-alert-btn" style="font-size:12px;color:#999999;margin: 0px 0 0 10px">仍有疑问？请联系 QQ 1502750200<a class="btn-sure" href="javascript:bro(7,6)">下一步</a></div>
+
+    </div>
+    <div class="m-alert" id="al6">
+        <div class="m-alert-title"> 推荐你使用以下浏览器？</div>
+
+        <div class="m-alert-content">
+            <p >3).点击图标 ，选择切换到“极速模式”</p>
+            <img src="images/qq_step2.png">
+
+        </div>
+
+        <div class="m-alert-btn" style="font-size:12px;color:#999999;margin: 0 20px 0 10px">仍有疑问？请联系 QQ 1502750200<a class="btn-sure" href="">我知道了</a></div>
+
+    </div>
+
+    <!--搜狗切换浏览器内核-->
+
+    <div class="m-alert" id="al7">
+        <div class="m-alert-title"> 找到问题了</div>
+
+        <div class="m-alert-content">
+            <p >2).请在本窗口右上角区域找到下图红色框中所示的“图标”，点击并切换到“高速模式
+            <img src="images/sougou.png">
+
+        </div>
+
+        <div class="m-alert-btn" style="font-size:12px;color:#999999;margin: 0 20px 0 10px">仍有疑问？请联系 QQ 1502750200<a class="btn-sure" href="">我知道了</a></div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<script>
+
+    function bro(a,b) {
+        for(var i=1;i<=a;i++){
+           var id = 'al'+i;
+            var x = document.getElementById(id);
+            x.style.display="none";
+        }
+       var id = 'al'+b;
+        var x = document.getElementById(id);
+        x.style.display="block";
+
+
+    }
+    bro(7,1);
+
+
+
+</script>
+
+

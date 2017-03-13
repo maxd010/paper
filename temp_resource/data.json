@@ -1,0 +1,105 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "data": [{
+    "num": "1",
+    "percent": "70%",
+    "type": "单选",
+    "difficulty": "一年级 S 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "2",
+    "percent": "82%",
+    "type": "单选",
+    "difficulty": "二年级 S 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "3",
+    "percent": "85%",
+    "type": "单选",
+    "difficulty": "三年级 Ssssssssssssssssssss 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "4",
+    "percent": "78%",
+    "type": "单选",
+    "difficulty": "四年级 C 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "5",
+    "percent": "24%",
+    "type": "单选",
+    "difficulty": "五年级 S 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "6",
+    "percent": "90%",
+    "type": "单选",
+    "difficulty": "六年级 A 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "7",
+    "percent": "65%",
+    "type": "单选",
+    "difficulty": "四年级 S 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "8",
+    "percent": "80%",
+    "type": "单选",
+    "difficulty": "四年级 B 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "5",
+    "percent": "24%",
+    "type": "单选",
+    "difficulty": "五年级 S 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "6",
+    "percent": "90%",
+    "type": "单选",
+    "difficulty": "四年级 A 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  },{
+    "num": "7",
+    "percent": "65%",
+    "type": "单选",
+    "difficulty": "四年级 S 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6",
+    "action":"查看"
+  },{
+    "num": "8",
+    "percent": "80%",
+    "type": "单选",
+    "difficulty": "四年级 B 级",
+    "total": "27",
+    "right": "21",
+    "wrong": "6"
+  }]
+}

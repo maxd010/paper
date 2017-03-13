@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        试题样式
+    </title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/paper.css"/>
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="top_bar">
+</div>
+<div class="m-bd m-card">
+    <h2 class="m-summary-title">
+        初一年级第一次单元考试
+        <a href="#" class="m-btn-forbidden">已结束</a>
+        <!--<a href="#" class="">结束考试</a>-->
+    </h2>
+    <table class="m-summary">
+        <tbody>
+        <tr>
+            <td><span class="m-summary-text">最高正确率</span>
+                <div class="m-summary-value m-top-score" >100%</div>
+            </td>
+            <td><span class="m-summary-text">最低正确率</span>
+                <div class="m-summary-value m-low-score" >48%</div>
+            </td>
+            <td><span class="m-summary-text">提交率</span>
+                <div class="m-summary-value " >98%</div>
+            </td>
+            <td><span class="m-summary-text">主动提交（人）</span>
+                <div class="m-summary-value " >23</div>
+            </td>
+            <td class="last"><span class="m-summary-text">被动提交（人）</span>
+                <div class="m-summary-value " >3</div>
+            </td>
+            <td class="last"><span class="m-summary-text">平均答题时长</span>
+                <div class="m-summary-value " >13:29:12</div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="m-bd m-card">
+    <div>
+        <!-- Nav tabs -->
+        <ul class="m-tabs" id="m-tabs">
+            <li class="active"><a href="#" data-toggle="tab">试卷试题</a></li>
+            <li><a href="#" data-toggle="tab">考试学生</a></li>
+
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="m-tab-content" id="m-tab-content">
+            <li class="tab-pane active">
+                <div  id="c1" style="width: 100%;height:400px;margin:0 auto"></div>
+               <table id="table"></table>
+            </li>
+            <li class="tab-pane" > <div  id="c2" style="width: 100%;height:400px;margin:0 auto"></div>
+            </li>
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap-table.min.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script>
+
+    //tab切换
+    $(document).ready(function() {
+        jQuery.jqtab = function(tabs,tabcontent,event) {
+
+            $(tabcontent).find("li").hide();
+            $(tabs).find("li:first").addClass("active").show();
+            $(tabcontent).find("li:first").show();
+
+            $(tabs).find("li").bind(event,function(){
+                $(this).addClass("active").siblings("li").removeClass("active");
+                var activeindex = $(tabs).find("li").index(this);
+                $(tabcontent).children().eq(activeindex).show().siblings().hide();
+                return false;
+            });
+
+        };
+        /*调用方法：*/
+        $.jqtab("#m-tabs","#m-tab-content","click");
+
+
+    });
+
+</script>
+
+<script>
+
+function DrawChart1() {
+    var myChart = echarts.init(document.getElementById('c1'));
+    option = {
+
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'line'
+            }
+        },
+        grid: {
+            top: '16%',
+            bottom:'10%',
+            left: '3%',
+            right: '3%',
+            containLabel: true
+        },
+        calculable: true,
+        xAxis: [{
+            type: 'category',
+            data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26'],
+            splitLine: {
+                show: false
+            }
+
+        }],
+        yAxis: [{
+            type: 'value',
+            boundaryGap: ['0%', '10%'],
+            splitLine: {
+                lineStyle: {
+                    color: ['#ededee']
+                }
+            }
+
+        }],
+        series: [{
+            name: '时间',
+            type: 'bar',
+            barWidth: '18',
+            barGap: '50%',
+            color:'#6b729e',
+            itemStyle: {
+                normal: {
+
+                    color: '#5b9bd5',
+                    label: {
+                        show: true,
+                        position: 'top'
+                    }
+                }
+            },
+            data: [ {value:82,name:0},
+                    {value:38,name:1},
+                    {value:22,name:1},
+                    {value:12,name:1},
+                    {value:32,name:1},
+                    {value:52,name:1},
+                    {value:32,name:1},
+                    {value:5,name:1},
+                    {value:12,name:1},
+                    {value:43,name:0},
+                    {value:23,name:1},
+                    {value:9,name:1},
+                    {value:22,name:0},
+                    {value:82,name:1},
+                {value:12,name:1},
+                {value:43,name:0},
+                {value:22,name:0},
+                {value:12,name:1},
+                {value:82,name:1},
+                {value:32,name:1},
+                {value:12,name:1},
+                {value:43,name:0},
+                {value:23,name:1},
+                {value:9,name:1},
+                {value:22,name:0},
+                    {value:32,name:1}
+                    ]
+        }]
+    };
+    option.series[0].itemStyle={
+        normal: {
+
+            color: function(params) {
+
+
+
+                var newColor="";
+                var index = params.dataIndex;
+
+
+
+//                if(params.value>70){
+                if(params.data.name ==0){
+
+                    newColor = '#5b9bd5';
+
+                }else{
+                    newColor = '#6b729e';
+
+                }
+                return newColor
+            }
+        }
+
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    myChart.on('click', function (params) {
+
+        var index = params.data.name;
+
+
+           alert(index);
+//           alert(params.seriesIndex);
+
+    });
+
+
+
+}
+
+    DrawChart1();
+</script>
+
+<script>
+    //table
+
+
+    $(function() {
+        $('#table').bootstrapTable({
+            url: 'temp_resource/data.json',
+            columns: [{
+                field: 'num',
+                title: '题号',
+                sortable:true
+
+            }, {
+                field: 'percent',
+                title: '正确率',
+                sortable:true
+            }, {
+                field: 'type',
+                title: '题型'
+            }, {
+                field: 'difficulty',
+                title: '难度',
+                sortable:true,
+                sorter:function(a,b){
+                    var aa = a[0];
+                    var bb = b[0];
+                    console.log(aa);
+                    switch (aa){
+                        case '一':
+                            aa = 1;
+                            break;
+                        default:
+                            aa = 2;
+                    }
+                    console.log(aa);
+                    return a.length-b.length;
+                }
+            }, {
+                field: 'total',
+                title: '作答人数'
+            }, {
+                field: 'right',
+                title: '正确人数',
+                sortable:true
+            }, {
+                field: 'wrong',
+                title: '错误人数',
+                sortable:true,
+            }, {
+                field: 'action',
+                title: '查看详情'
+            }]
+
+
+        });
+    });
+</script>
+
+</html>
